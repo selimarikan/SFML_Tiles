@@ -4,6 +4,8 @@
 #include <map>
 #include <memory>
 
+
+// TextureManager holds all textures loaded. It is responsible for the memory management.
 class TextureManager
 {
 private:

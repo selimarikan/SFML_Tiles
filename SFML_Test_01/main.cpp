@@ -13,35 +13,29 @@ int main()
 {
 	Game game("Assets/");
 
-    //sf::Texture tex;
-    //tex.loadFromFile("Assets/grass01.png");
 
-	int tileSize = 32;
-    int mapWidth = 1000;
-    int mapHeight = 1000;
-
+	unsigned int tileSize = 32;
+    unsigned int mapWidth = 1000;
+    unsigned int mapHeight = 1000;
+    
+    Map map = Map(mapWidth, mapHeight, tileSize);
+    
     std::vector<sf::Texture*> grassTextures;
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("grass01"));
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("grass02"));
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("grass03"));
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("dirt"));
-    Animation grassAnim = Animation(0, 3, 2.0f);
+    map.AddTexture("grass", grassTextures);
+    map.Build();
 
-	for (size_t i = 0; i < mapWidth; i+= tileSize)
-	{
-		for (size_t j = 0; j < mapHeight; j+= tileSize)
-		{
-            // Pick the texture
-
-            // Create the tile
-            Tile* pTile = new Tile(sf::Vector2f(tileSize, tileSize), grassTextures, 0);
-            //pTile->AddAnim(grassAnim);
-            pTile->SetPosition(sf::Vector2f(i, j));
-
-            // Add tile to the list so it gets rendered
-			game.AddObject(pTile); //, "rect" + std::to_string(i) + "_" + std::to_string(j)
-		}
-	}
+    //Animation grassAnim = Animation(0, 3, 2.0f);
+    
+    // Add tiles to the list so it gets rendered
+    for (auto& tile: map.GetTiles())
+    {
+        game.AddObject(tile);
+    }
+    
 
     // Test wheat
     std::vector<sf::Texture*> wheatTextures;

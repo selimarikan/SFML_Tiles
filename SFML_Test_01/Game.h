@@ -8,6 +8,7 @@
 
 #include "Character.h"
 #include "ITile.h"
+#include "Map.h"
 #include "TextureManager.h"
 
 constexpr auto MAX_FRAMES = 60;

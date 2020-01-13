@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <random>
 #include <vector>
 
 #include "AnimationHandler.h"
@@ -23,5 +24,9 @@ public:
 
 private:
     std::vector<sf::Texture*> m_pTextures;
+
+    std::random_device m_RandDev;
+    std::mt19937 m_RandEngine;
+    std::uniform_int_distribution<int> m_RandDist;
 };
 
