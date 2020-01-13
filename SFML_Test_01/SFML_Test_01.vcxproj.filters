@@ -62,5 +62,11 @@
     <ClInclude Include="ITile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Extern\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json" />
   </ItemGroup>
 </Project>

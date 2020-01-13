@@ -16,7 +16,7 @@ class Game
 {
 public:
 
-	Game();
+	Game(const std::filesystem::path& assetsDir);
     bool AddObject(ITile* pObj);
 	bool RemoveObject(int id);
 	void Run();
@@ -34,5 +34,7 @@ private:
 	void LoadTextures();
 
 	std::list<ITile*> m_Tiles;
+
+	std::filesystem::path m_AssetsDir;
 };
 

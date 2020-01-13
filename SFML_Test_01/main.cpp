@@ -3,9 +3,15 @@
 #include "Game.h"
 #include "Tile.h"
 
+
+void LoadTextures()
+{
+
+}
+
 int main()
 {
-	Game game;
+	Game game("Assets/");
 
     //sf::Texture tex;
     //tex.loadFromFile("Assets/grass01.png");

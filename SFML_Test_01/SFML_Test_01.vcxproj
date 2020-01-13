@@ -144,11 +144,15 @@
   <ItemGroup>
     <ClInclude Include="AnimationHandler.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Extern\json.hpp" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="ITile.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Tile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

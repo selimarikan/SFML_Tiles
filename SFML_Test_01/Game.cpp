@@ -8,7 +8,7 @@
 // TODO: Create map editor from txt file
 // TODO: Move map/view when close to the edges
 // TODO: Create "options" class
-Game::Game()
+Game::Game(const std::filesystem::path& assetsDir): m_AssetsDir(assetsDir)
 {
 	m_Window.create(sf::VideoMode(640, 480), "SFML Test 01");
 	m_Window.setVerticalSyncEnabled(false);
@@ -166,7 +166,7 @@ void Game::LoadTextures()
 {
     std::cout << "Loading textures...\n";
 
-    std::string charDir = "Assets/characters/";
+    std::filesystem::path charDir = m_AssetsDir / "characters";
     for (const auto& entry : std::filesystem::directory_iterator(charDir))
     {
         std::filesystem::path path = entry.path();
@@ -174,7 +174,7 @@ void Game::LoadTextures()
         std::cout << "Loading texture: " << path.filename().stem() << std::endl; //DBG
     }
 
-    std::string tilesDir = "Assets/tiles/";
+	std::filesystem::path tilesDir = m_AssetsDir / "tiles/";
     for (const auto& entry : std::filesystem::directory_iterator(tilesDir))
     {
         std::filesystem::path path = entry.path();
