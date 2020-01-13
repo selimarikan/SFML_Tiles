@@ -1,0 +1,31 @@
+﻿  Game.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(44,52): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(44,34): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(112,35): error C3083:  'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(112,47): error C2039:  'directory_iterator': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702\include\experimental\filesystem(30): message :  see declaration of 'std'
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(112,74): error C3861:  'directory_iterator': identifier not found
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(113,5): error C3312:  no callable 'begin' function found for type 'unknown-type'
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(113,5): error C3312:  no callable 'end' function found for type 'unknown-type'
+  main.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(114,22): error C2065:  'entry': undeclared identifier
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,79): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,79): warning C4244:         with
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,79): warning C4244:         [
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,79): warning C4244:             T=float
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,79): warning C4244:         ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,69): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,69): warning C4244:         with
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,69): warning C4244:         [
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,69): warning C4244:             T=float
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(19,69): warning C4244:         ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,40): warning C4244:  'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,40): warning C4244:         with
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,40): warning C4244:         [
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,40): warning C4244:             T=float
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,40): warning C4244:         ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,37): warning C4244:  'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,37): warning C4244:         with
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,37): warning C4244:         [
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,37): warning C4244:             T=float
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(24,37): warning C4244:         ]

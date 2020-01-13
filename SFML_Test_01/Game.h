@@ -1,0 +1,38 @@
+#pragma once
+
+#include <SFML/Graphics.hpp>
+#include <filesystem>
+#include <iostream>
+#include <list>
+#include <memory>
+
+#include "Character.h"
+#include "ITile.h"
+#include "TextureManager.h"
+
+constexpr auto MAX_FRAMES = 60;
+
+class Game
+{
+public:
+
+	Game();
+    bool AddObject(ITile* pObj);
+	bool RemoveObject(int id);
+	void Run();
+
+    TextureManager m_TextureMgr;
+    Character* m_pPlayer;
+
+private:
+	sf::RenderWindow m_Window;
+	sf::View m_GameView;
+	sf::View m_GUIView;
+
+	void HandleEvents();
+	void Render(float dt);
+	void LoadTextures();
+
+	std::list<ITile*> m_Tiles;
+};
+

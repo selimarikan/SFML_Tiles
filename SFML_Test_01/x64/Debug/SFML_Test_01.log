@@ -1,0 +1,58 @@
+﻿  AnimationHandler.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.h(47,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.cpp(19,24): warning C4018: '>': signed/unsigned mismatch
+  Character.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.h(47,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Game.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.h(47,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(81,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\Game.cpp(81,34): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  ITile.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.h(47,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  TextureManager.cpp
+  Tile.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.h(47,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\AnimationHandler.h(47,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(31,59): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(31,49): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(33,48): warning C4244: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(33,45): warning C4244: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(46,51): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(46,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(57,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Selim\Source\Repos\SFML_Test_01\SFML_Test_01\main.cpp(57,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  SFML_Test_01.vcxproj -> C:\Users\Selim\Source\Repos\SFML_Test_01\x64\Debug\SFML_Test_01.exe
