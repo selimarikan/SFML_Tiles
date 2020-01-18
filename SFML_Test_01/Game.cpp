@@ -166,6 +166,7 @@ void Game::LoadTextures()
 {
     std::cout << "Loading textures...\n";
 
+	// Load characters
     std::filesystem::path charDir = m_AssetsDir / "characters";
     for (const auto& entry : std::filesystem::directory_iterator(charDir))
     {
@@ -174,6 +175,7 @@ void Game::LoadTextures()
         std::cout << "Loading texture: " << path.filename().stem() << std::endl; //DBG
     }
 
+	// Load all the tiles
 	std::filesystem::path tilesDir = m_AssetsDir / "tiles/";
     for (const auto& entry : std::filesystem::directory_iterator(tilesDir))
     {

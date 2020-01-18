@@ -25,6 +25,7 @@ public:
 private:
     std::vector<sf::Texture*> m_pTextures;
 
+    // Random num generator to pick random textures for the tiles
     std::random_device m_RandDev;
     std::mt19937 m_RandEngine;
     std::uniform_int_distribution<int> m_RandDist;

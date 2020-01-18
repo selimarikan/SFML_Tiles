@@ -1,8 +1,11 @@
 #include <memory>
+#include <filesystem>
 
+#include "Extern/json.hpp"
 #include "Game.h"
 #include "Tile.h"
 
+using json = nlohmann::json;
 
 void LoadTextures()
 {
@@ -11,7 +14,9 @@ void LoadTextures()
 
 int main()
 {
-	Game game("Assets/");
+    json config;
+    std::filesystem::path assetsPath = "Assets/";
+	Game game(assetsPath);
 
 
 	unsigned int tileSize = 32;
@@ -24,8 +29,21 @@ int main()
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("grass01"));
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("grass02"));
     grassTextures.emplace_back(game.m_TextureMgr.GetTexture("grass03"));
-    grassTextures.emplace_back(game.m_TextureMgr.GetTexture("dirt"));
+    //grassTextures.emplace_back(game.m_TextureMgr.GetTexture("dirt"));
     map.AddTexture("grass", grassTextures);
+
+    std::vector<sf::Texture*> wheatTextures;
+    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage1"));
+    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage2"));
+    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage3"));
+    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage4"));
+    map.AddTexture("wheat", wheatTextures);
+
+    std::vector<sf::Texture*> rockTextures;
+    rockTextures.emplace_back(game.m_TextureMgr.GetTexture("rock"));
+    rockTextures.emplace_back(game.m_TextureMgr.GetTexture("rock_moss"));
+    map.AddTexture("rock", rockTextures);
+
     map.Build();
 
     //Animation grassAnim = Animation(0, 3, 2.0f);
@@ -36,30 +54,6 @@ int main()
         game.AddObject(tile);
     }
     
-
-    // Test wheat
-    std::vector<sf::Texture*> wheatTextures;
-    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage1"));
-    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage2"));
-    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage3"));
-    wheatTextures.emplace_back(game.m_TextureMgr.GetTexture("wheat_stage4"));
-    Tile* pTile = new Tile(sf::Vector2f(tileSize, tileSize), wheatTextures, 127);
-    pTile->SetPosition(sf::Vector2f(128.0f, 128.0f));
-    Animation growAnim = Animation(0, 3, 0.5f);
-    pTile->AddAnim(growAnim);
-    game.AddObject(pTile); //, "wheat"
-
-
-    // Test rock
-    std::vector<sf::Texture*> rockTextures;
-    rockTextures.emplace_back(game.m_TextureMgr.GetTexture("rock"));
-    rockTextures.emplace_back(game.m_TextureMgr.GetTexture("rock_moss"));
-    Tile* pTile2 = new Tile(sf::Vector2f(tileSize, tileSize), rockTextures, 127);
-    Animation rockAnim = Animation(0, 1, 1.0f);
-    //pTile2->AddAnim(rockAnim);
-    pTile2->SetPosition(sf::Vector2f(196.0f, 196.0f));
-    game.AddObject(pTile2); //, "wheat"
-
 
     game.AddObject(game.m_pPlayer); //, "ThePlayer"
 	game.Run();

@@ -36,7 +36,8 @@ private:
 public:
     void AddAnim(Animation& anim);
 
-    // Update the current frame of animation. dt is the time since the update was last called (time for one frame to be executed).
+    // Update the current frame of animation. dt is the time since 
+    // the update was last called (time for one frame to be executed).
     int Update(const float dt);
 
     // Change the animation, resetting t in the process.
